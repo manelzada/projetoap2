@@ -1,13 +1,14 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx-swt.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.web.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.swing.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.media.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.graphics.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.fxml.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.controls.jar",
-        "/home/emmanoel/Documentos/javafx-sdk-11.0.2/lib/javafx.base.jar"
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.base.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.controls.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.fxml.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.graphics.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.media.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.swing.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx.web.jar",
+        "e:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib\\javafx-swt.jar"
+        
     ]
 }

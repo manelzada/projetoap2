@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class ArtigoCientif extends Produto {
 
     private String Universidade;
@@ -31,5 +33,10 @@ public class ArtigoCientif extends Produto {
         this.orientador = orientador;
     }
 
+    public ArrayList<ArtigoCientif> listarArtigoCientif() throws NullPointerException {
+        ArtigoCientif arti = new ArtigoCientif();
+        ArrayList <ArtigoCientif> artig = arti.listarArtigoCientif();
+        return artig;
+    }
     
 }

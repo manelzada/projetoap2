@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class Livro extends Produto {
     
     private int codigo;
@@ -46,5 +48,11 @@ public class Livro extends Produto {
         else
             this.valorCompra = valorCompra;
     } 
+
+    public ArrayList<Livro> listarLivro() throws NullPointerException {
+        Livro liv = new Livro();
+        ArrayList <Livro> livr = liv.listarLivro();
+        return livr;
+    }
 
 }

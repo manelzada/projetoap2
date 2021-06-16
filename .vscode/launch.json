@@ -4,8 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
-
+        {
+            "type": "java",
+            "name": "Launch AppBiblioteca",
+            "request": "launch",
+            "mainClass": "visao.AppBiblioteca",
+            "projectName": "projetoap2_7a935edc"
+        },
         {
             "type": "java",
             "name": "Launch Current File",
@@ -16,7 +21,7 @@
             "type": "java",
             "name": "Launch AppBiblioteca",
             "request": "launch",
-            "vmArgs": "--module-path ~/Documentos/javafx-sdk-11.0.2/lib/ --add-modules=javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path E:\\Users\\jonat\\Downloads\\javafx-sdk-11.0.2\\lib --add-modules=javafx.controls,javafx.fxml",
             "mainClass": "visao.AppBiblioteca",
             "projectName": "projetoap2_2a8ceb72"
         }
