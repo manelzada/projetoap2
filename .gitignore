@@ -1,3 +1,4 @@
 bin/*
 vscode/*
 win_run.cmd
+launch.json
