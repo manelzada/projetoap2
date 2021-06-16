@@ -1,7 +1,2 @@
-.bin/*
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.win_run.cmd
+bin/*
+vscode/*
