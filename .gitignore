@@ -2,3 +2,4 @@ bin/*
 vscode/*
 win_run.cmd
 launch.json
+settings.json
