@@ -79,6 +79,11 @@
                </font>
             </Label>
             <PasswordField fx:id="campoSenha" layoutX="332.0" layoutY="147.0" prefHeight="24.0" prefWidth="266.0" promptText="Senha" />
+            <Button fx:id="botaoAdm" layoutX="586.0" layoutY="366.0" mnemonicParsing="false" onAction="#loginAdm" text="ADM">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
       </children>
     </AnchorPane>
   </children>

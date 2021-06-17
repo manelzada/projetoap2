@@ -61,8 +61,8 @@
                   </Text>
                </children>
             </Pane>
-            <TextField fx:id="cadastroEmail" layoutX="332.0" layoutY="99.0" prefHeight="24.0" prefWidth="266.0" />
-            <TextField fx:id="cadastroSenha" layoutX="332.0" layoutY="145.0" prefHeight="24.0" prefWidth="266.0" />
+            <TextField fx:id="cadastroEmail" layoutX="332.0" layoutY="99.0" prefHeight="24.0" prefWidth="266.0" promptText="Email" />
+            <TextField fx:id="cadastroSenha" layoutX="332.0" layoutY="145.0" prefHeight="24.0" prefWidth="266.0" promptText="Senha" />
             <Button fx:id="botaoCadastro" layoutX="390.0" layoutY="229.0" mnemonicParsing="false" onAction="#cadastroFeito" text="CADASTRAR">
                <font>
                   <Font size="20.0" />
@@ -73,10 +73,7 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label layoutX="332.0" layoutY="83.0" text="Email:" />
-            <Label layoutX="332.0" layoutY="129.0" text="Senha:" />
-            <TextField fx:id="cadastroNumero" layoutX="332.0" layoutY="196.0" prefHeight="24.0" prefWidth="266.0" />
-            <Label layoutX="332.0" layoutY="180.0" text="Numero:" />
+            <TextField fx:id="cadastroNumero" layoutX="332.0" layoutY="196.0" prefHeight="24.0" prefWidth="266.0" promptText="Numero" />
       </children>
     </AnchorPane>
   </children>

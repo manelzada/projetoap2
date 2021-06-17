@@ -21,6 +21,7 @@ import login.Login;
 
 public class LoginController implements Initializable {
     Login login = new Login();
+
     @FXML
     private TextField campoUsuario;
 
@@ -37,6 +38,16 @@ public class LoginController implements Initializable {
     private AnchorPane loginContainer;
 
     @FXML
+    private Button botaoAdm;
+
+    @FXML
+    void loginAdm(ActionEvent event) throws IOException {
+        FXMLLoader loginAdm = new FXMLLoader(getClass().getResource("/login/layout.fxml"));
+        Parent logAdm = loginAdm.load();
+        loginContainer.getChildren().setAll(logAdm);
+    }
+
+    @FXML
     public void fazerCadastro(ActionEvent event) throws IOException {
         FXMLLoader cadastroLoader = new FXMLLoader(getClass().getResource("/login/layout.fxml"));
         Parent cadastro = cadastroLoader.load();
@@ -48,6 +59,7 @@ public class LoginController implements Initializable {
         ControleUsuario cUser = new ControleUsuario();
         String usuario = campoUsuario.getText();
         String senha = campoSenha.getText();
+
         boolean verificaLogin = cUser.loginUsuario(usuario, senha);
         if (verificaLogin == true) {
             System.out.print("Deu bom");
