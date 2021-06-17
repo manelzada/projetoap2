@@ -34,6 +34,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -61,25 +62,23 @@
                   </Text>
                </children>
             </Pane>
-            <TextField fx:id="campoUsuario" layoutX="332.0" layoutY="153.0" prefHeight="24.0" prefWidth="266.0" />
-            <TextField fx:id="campoSenha" layoutX="332.0" layoutY="200.0" prefHeight="24.0" prefWidth="266.0" />
-          <Button fx:id="botaoEntrar" layoutX="332.0" layoutY="244.0" mnemonicParsing="false" onAction="#fazerLogin" text="ENTRAR">
+            <TextField fx:id="campoUsuario" layoutX="332.0" layoutY="101.0" prefHeight="24.0" prefWidth="266.0" promptText="Email" />
+          <Button fx:id="botaoEntrar" layoutX="332.0" layoutY="200.0" mnemonicParsing="false" onAction="#fazerLogin" text="ENTRAR">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="botaoCadastrar" layoutX="448.0" layoutY="244.0" mnemonicParsing="false" onAction="#fazerCadastro" text="CADASTRAR">
+            <Button fx:id="botaoCadastrar" layoutX="448.0" layoutY="200.0" mnemonicParsing="false" onAction="#fazerCadastro" text="CADASTRAR">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
             <Label layoutX="332.0" layoutY="22.0" text="Login">
                <font>
-                  <Font size="40.0" />
+                  <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <Label layoutX="332.0" layoutY="137.0" text="Email:" />
-            <Label layoutX="332.0" layoutY="184.0" text="Senha:" />
+            <PasswordField fx:id="campoSenha" layoutX="332.0" layoutY="147.0" prefHeight="24.0" prefWidth="266.0" promptText="Senha" />
       </children>
     </AnchorPane>
   </children>
