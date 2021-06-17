@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import controle.ControleUsuario;
-import dados.LoginDados;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
@@ -25,7 +25,7 @@ public class LoginController implements Initializable {
     private TextField campoUsuario;
 
     @FXML
-    private TextField campoSenha;
+    private PasswordField campoSenha;
 
     @FXML
     private Button botaoEntrar;
@@ -50,9 +50,14 @@ public class LoginController implements Initializable {
         String senha = campoSenha.getText();
         boolean verificaLogin = cUser.loginUsuario(usuario, senha);
         if (verificaLogin == true) {
-           System.out.print("Deu bom");
+            System.out.print("Deu bom");
         } else {
-            System.out.print("Deu ruim");
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setTitle("Login");
+            alerta.setHeaderText(null);
+            alerta.setContentText("Usuario ou senha incorreto/Inexistente");
+
+            alerta.showAndWait();
         }
     }
 

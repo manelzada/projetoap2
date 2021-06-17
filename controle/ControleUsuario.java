@@ -25,7 +25,6 @@ public class ControleUsuario {
         ArrayList<Login> listLogin = listarUsuario();
         for (Login g : listLogin) {
             if (email.equals(g.getEmail())) {
-                System.out.print(g.getEmail() + g.getSenha());
                 return g;
             }
         }

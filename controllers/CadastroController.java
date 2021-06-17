@@ -2,9 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
-import controle.ControleProduto;
 import controle.ControleUsuario;
-import dados.LoginDados;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
-import login.Login;
 
 public class CadastroController {
 
@@ -48,6 +45,7 @@ public class CadastroController {
             ControleUsuario cUser = new ControleUsuario();
             cUser.cadastrarUsuario(userEmail, userSenha, userNumero);
 
+            // Troca de telas
             FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("/visao/layout.fxml"));
             Parent login = loginLoader.load();
             cadastroContainer.getChildren().setAll(login);
