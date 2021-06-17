@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -30,8 +32,7 @@ public class MenuController implements Initializable {
     @FXML
     private Button btnCatalogoLivro;
 
-    @FXML
-    private Button btnSair;
+    
 
     @FXML
     private AnchorPane cadastroContainer;
@@ -41,72 +42,73 @@ public class MenuController implements Initializable {
 
     @FXML
     private Button btnSobre;
-
-
-    private void handleClicks(ActionEvent event){
-        if(event.getSource()==btnCatalogoLivro){
-            paneCadastroConteinerMini.setText("Catalogo Livro");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(red: 32 , green: , blue: ), CornerRadii.EMPTY, Insets.EMPTY)
-        }
-
-        else if(event.getSource()==btnBuscarArtigo){
-
-        }
-
-        else if(event.getSource()==btnSolicitarEmprestimo){
-
-        }
-
-        else if(event.getSource()==btnCarrinho){
-
-        }
-
-        else if(event.getSource()==btnSobre){
-
-        }
-        
-        else if(event.getSource()==btnSair){
-
-        }
-    }
-
-
-
+ 
+     @FXML
+     private Label lblStatus;
 
     @FXML
-    void abrirCatalogo(ActionEvent event) {
-
-    }
+    private Label lblStatusMini;
 
     @FXML
-    void abrirCatalogoArtigo(ActionEvent event) {
-
-    }
-
-    @FXML
-    void solicitarEmprestimo(ActionEvent event) {
-
-    }
-
-    @FXML
-    void abrirSobre(ActionEvent event) {
-
-    }
-
-    @FXML
-    void sairDoMenu(ActionEvent event) {
-
-    }
-
-    @FXML
-    void addItemCarrinho(ActionEvent event) {
-
-    }
+    private fontAwesomeIconView btnSair;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
         
     }
+    
+    @FXML
+    private void handleClicks(ActionEvent event){
+        if(event.getSource()==btnCatalogoLivro)
+        {
+            lblStatusMini.setText("/home/catalogo Livro");
+            lblStatus.setText("Catalogo Livro");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb( 32 , 0 , 0 ), CornerRadii.EMPTY, Insets.EMPTY)));
+        }
+
+        else if(event.getSource()==btnBuscarArtigo){
+            lblStatusMini.setText("/home/buscar artigo");
+            lblStatus.setText("Buscar artigo");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0 ), CornerRadii.EMPTY, Insets.EMPTY)));
+
+
+        }
+
+        else if(event.getSource()==btnSolicitarEmprestimo){
+            lblStatusMini.setText("/home/solicitar emprestimo");
+            lblStatus.setText("Solicitar emprestimo");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+        }
+
+        else if(event.getSource()==btnCarrinho){
+            lblStatusMini.setText("/home/carrinho");
+            lblStatus.setText("Carrinho");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+        }
+
+        else if(event.getSource()==btnSobre){
+            lblStatusMini.setText("/home/sobre");
+            lblStatus.setText("Sobre");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+
+        }
+        
+        
+    }
+
+
+ 
+
+ 
+
+ public void handleClose(javafx.scene.input.MouseEvent event){
+
+    if(event.getSource()==btnSair)
+    System.exit(0);
+ }
+
+
+    
 
 }

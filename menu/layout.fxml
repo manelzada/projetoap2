@@ -59,32 +59,32 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnCatalogoLivro" blendMode="MULTIPLY" contentDisplay="TEXT_ONLY" layoutY="75.0" mnemonicParsing="false" onAction="#abrirCatalogo" prefHeight="50.0" prefWidth="188.0" text="Catálogo de Livros" textAlignment="CENTER">
+                  <Button fx:id="btnCatalogoLivro" blendMode="MULTIPLY" contentDisplay="TEXT_ONLY" layoutY="75.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="50.0" prefWidth="188.0" text="Catálogo de Livros" textAlignment="CENTER">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnBuscarArtigo" blendMode="MULTIPLY" layoutY="145.0" mnemonicParsing="false" onAction="#abrirCatalogoArtigo" prefHeight="50.0" prefWidth="188.0" text="Buscar Artigo científico">
+                  <Button fx:id="btnBuscarArtigo" blendMode="MULTIPLY" layoutY="145.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="50.0" prefWidth="188.0" text="Buscar Artigo científico">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSolicitarEmprestimo" blendMode="MULTIPLY" layoutY="216.0" mnemonicParsing="false" onAction="#solicitarEmprestimo" prefHeight="44.0" prefWidth="188.0" text="Solicitar Emprestimo">
+                  <Button fx:id="btnSolicitarEmprestimo" blendMode="MULTIPLY" layoutY="216.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="44.0" prefWidth="188.0" text="Solicitar Emprestimo">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSobre" blendMode="MULTIPLY" layoutY="376.0" mnemonicParsing="false" onAction="#abrirSobre" prefHeight="31.0" prefWidth="92.0" text="Sobre">
+                  <Button fx:id="btnSobre" blendMode="MULTIPLY" layoutY="376.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="31.0" prefWidth="92.0" text="Sobre">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSair" blendMode="MULTIPLY" layoutX="91.0" layoutY="376.0" mnemonicParsing="false" onAction="#sairDoMenu" prefHeight="31.0" prefWidth="98.0" text="Sair">
+                  <Button fx:id="btnSair" blendMode="MULTIPLY" layoutX="91.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="31.0" prefWidth="98.0" text="Sair">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnCarrinho" blendMode="MULTIPLY" layoutY="289.0" mnemonicParsing="false" onAction="#addItemCarrinho" prefHeight="44.0" prefWidth="188.0" text="Carrinho">
+                  <Button fx:id="btnCarrinho" blendMode="MULTIPLY" layoutY="289.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="44.0" prefWidth="188.0" text="Carrinho">
                      <font>
                         <Font size="20.0" />
                      </font>
