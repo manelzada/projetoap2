@@ -32,6 +32,11 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -43,40 +48,49 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
   <children>
     <AnchorPane fx:id="cadastroContainer" maxHeight="-1.0" maxWidth="-1.0">
       <children>
-            <Pane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #845EC2;">
+            <Pane fx:id="paneCadastroConteinerMini" prefHeight="405.0" prefWidth="188.0" style="-fx-background-color: rgb(115,70,40);">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/icon.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" layoutX="8.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA Bibliotecas" textAlignment="CENTER" wrappingWidth="266.0">
+                  <Text fill="WHITE" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName:" wrappingWidth="129.0">
                      <font>
-                        <Font name="System Bold" size="35.0" />
+                        <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
+                  <Button fx:id="btnCatalogoLivro" blendMode="MULTIPLY" contentDisplay="TEXT_ONLY" layoutY="75.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="50.0" prefWidth="188.0" text="Catálogo de Livros" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBuscarArtigo" blendMode="MULTIPLY" layoutY="145.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="50.0" prefWidth="188.0" text="Buscar Artigo científico">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSolicitarEmprestimo" blendMode="MULTIPLY" layoutY="216.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="44.0" prefWidth="188.0" text="Solicitar Emprestimo">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSobre" blendMode="MULTIPLY" layoutY="376.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="31.0" prefWidth="92.0" text="Sobre">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSair" blendMode="MULTIPLY" layoutX="91.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="31.0" prefWidth="98.0" text="Sair">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCarrinho" blendMode="MULTIPLY" layoutY="289.0" mnemonicParsing="false" onAction="#handleclicks" prefHeight="44.0" prefWidth="188.0" text="Carrinho">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
-            <TextField fx:id="cadastroEmail" layoutX="332.0" layoutY="99.0" prefHeight="24.0" prefWidth="266.0" />
-            <TextField fx:id="cadastroSenha" layoutX="332.0" layoutY="145.0" prefHeight="24.0" prefWidth="266.0" />
-            <Button fx:id="botaoCadastro" layoutX="390.0" layoutY="229.0" mnemonicParsing="false" onAction="#cadastroFeito" text="CADASTRAR">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Label layoutX="332.0" layoutY="22.0" text="Cadastrar">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </Label>
-            <Label layoutX="332.0" layoutY="83.0" text="Email:" />
-            <Label layoutX="332.0" layoutY="129.0" text="Senha:" />
-            <TextField fx:id="cadastroNumero" layoutX="332.0" layoutY="196.0" prefHeight="24.0" prefWidth="266.0" />
-            <Label layoutX="332.0" layoutY="180.0" text="Numero:" />
       </children>
     </AnchorPane>
   </children>
