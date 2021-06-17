@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
+import controle.ControleProduto;
 import controle.ControleUsuario;
 import dados.LoginDados;
 import javafx.event.ActionEvent;
@@ -16,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import login.Login;
 
 public class CadastroController {
-    ControleUsuario conUser = new ControleUsuario();
 
     @FXML
     private AnchorPane cadastroContainer;
@@ -45,8 +45,9 @@ public class CadastroController {
             alerta.setContentText("Você deixou algum(s) campo(s) em branco, repita a operação");
             alerta.showAndWait();
         } else {
-            //conUser.cadastrarUsuario(userEmail, userSenha, userNumero);
-            LoginDados.cadastrarLogin(new Login(userEmail, userSenha, userNumero));
+            ControleUsuario cUser = new ControleUsuario();
+            cUser.cadastrarUsuario(userEmail, userSenha, userNumero);
+
             FXMLLoader loginLoader = new FXMLLoader(getClass().getResource("/visao/layout.fxml"));
             Parent login = loginLoader.load();
             cadastroContainer.getChildren().setAll(login);
@@ -54,3 +55,6 @@ public class CadastroController {
     }
 
 }
+/* 
+cadastrarLogin(new Login(userEmail, userSenha, userNumero))
+*/

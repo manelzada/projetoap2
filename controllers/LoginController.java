@@ -1,8 +1,11 @@
 package controllers;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import controle.ControleUsuario;
 import dados.LoginDados;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,9 +19,8 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import login.Login;
 
-public class LoginController implements Initializable{
-
-    //static String dataBase = "https://na-bibliotecas-default-rtdb.firebaseio.com/";
+public class LoginController implements Initializable {
+    Login login = new Login();
     @FXML
     private TextField campoUsuario;
 
@@ -35,31 +37,28 @@ public class LoginController implements Initializable{
     private AnchorPane loginContainer;
 
     @FXML
-    public void fazerCadastro(ActionEvent event) throws IOException{
+    public void fazerCadastro(ActionEvent event) throws IOException {
         FXMLLoader cadastroLoader = new FXMLLoader(getClass().getResource("/login/layout.fxml"));
         Parent cadastro = cadastroLoader.load();
         loginContainer.getChildren().setAll(cadastro);
-    } 
+    }
 
     @FXML
-    void fazerLogin(ActionEvent event) {
+    void fazerLogin(ActionEvent event) throws FileNotFoundException, IOException, ClassNotFoundException {
+        ControleUsuario cUser = new ControleUsuario();
         String usuario = campoUsuario.getText();
         String senha = campoSenha.getText();
-        LoginDados.verificaLogin();
-        if() {
-            System.out.println("Login sucedido");
+        boolean verificaLogin = cUser.loginUsuario(usuario, senha);
+        if (verificaLogin == true) {
+           System.out.print("Deu bom");
         } else {
-            Alert alerta = new Alert(AlertType.INFORMATION);
-            alerta.setTitle("Alerta de login");
-            alerta.setHeaderText(null);
-            alerta.setContentText("email ou senha inválido, repita a operação ou cadastre uma nova conta.");
-            alerta.showAndWait();
+            System.out.print("Deu ruim");
         }
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+
     }
 
 }
