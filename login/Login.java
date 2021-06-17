@@ -1,33 +1,28 @@
 package login;
-/*
-Os niveis das contas serão definidas de 0 a 3 Sendo:
-0 - Usuário normal(cliente): Terá acesso a biblioteca comum, comprar, alugar, ver pendencias, data de entregas, livros em posse...
-1 - Moderador: Irá ter acesso a toda a lista de usuarios comuns, podendo emitir um alerta de devolução, ou definir uma multa para um
-usuário e poderá adicionar mais itens ao catalogo.
-2 - ADM: Acesso total ao fluxo de controle do app, tendo os mesmos direitos do moderador, mas, podendo criar, alterar, e exlcuir 
-contas no sistema.
-*/
-public class Login {
-    String id;
-    String user; 
+
+import java.io.Serializable;
+
+public class Login implements Serializable{
+    String numero;
     String senha;
     String email;
-    int nivel; 
+    int nivel;
 
-    public String getId() {
-        return this.id;
+    public Login() {
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public Login(String numero, String senha, String email) {
+        this.email = email;
+        this.senha = senha;
+        this.numero = numero;
     }
 
-    public String getUser() {
-        return this.user;
+    public String getNumero() {
+        return this.numero;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getSenha() {
