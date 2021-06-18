@@ -5,8 +5,10 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -32,8 +34,6 @@ public class MenuController implements Initializable {
     @FXML
     private Button btnCatalogoLivro;
 
-    
-
     @FXML
     private AnchorPane cadastroContainer;
 
@@ -52,66 +52,53 @@ public class MenuController implements Initializable {
     @FXML
     private Button btnSair;
 
+    @FXML
+    private AnchorPane anchorTela;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
              
     }
     
     @FXML
-    private void handleClicks(ActionEvent event){
-        if(event.getSource()==btnCatalogoLivro)
-        {
-            lblStatusMini.setText("/home/catalogo Livro");
-            lblStatus.setText("Catalogo Livro");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb( 32 , 0 , 0 ), CornerRadii.EMPTY, Insets.EMPTY)));
+    private void handleClicks(ActionEvent event)throws Exception{
+        if(event.getSource()==btnCatalogoLivro){
+            carregarTela("/visao/catalogoDeLivros.fxml");
         }
 
         else if(event.getSource()==btnBuscarArtigo){
-            lblStatusMini.setText("/home/buscar artigo");
-            lblStatus.setText("Buscar artigo");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0 ), CornerRadii.EMPTY, Insets.EMPTY)));
-
-
+            carregarTela("/visao/buscaArtigo.fxml");
         }
 
         else if(event.getSource()==btnSolicitarEmprestimo){
-            lblStatusMini.setText("/home/solicitar emprestimo");
-            lblStatus.setText("Solicitar emprestimo");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+            carregarTela("/visao/solicitarEmprestimo.fxml");
         }
 
         else if(event.getSource()==btnCarrinho){
-            lblStatusMini.setText("/home/carrinho");
-            lblStatus.setText("Carrinho");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+            carregarTela("/visao/carrinho.fxml");
         }
 
         else if(event.getSource()==btnSobre){
-            lblStatusMini.setText("/home/sobre");
-            lblStatus.setText("Sobre");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+            carregarTela("/visao/sobre.fxml");
 
         }
         
         else if(event.getSource()==btnSair){
-            lblStatusMini.setText("/home/sair");
-            lblStatus.setText("Sair");
-            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
-
-        }
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/visao/layout.fxml"));
+            Parent root = fxmlLoader.load();
+            cadastroContainer.getChildren().setAll(root);
+        } 
         
     }
 
+    public void carregarTela(String caminho)throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(caminho));
+        Parent parents = loader.load();
+        anchorTela.getChildren().setAll(parents);
+        
+        
+    }
 
- 
-
- 
-
- public void handleClose(javafx.scene.input.MouseEvent event){
-
-    if(event.getSource()==btnSair)
-    System.exit(0);
- }
 
 
     

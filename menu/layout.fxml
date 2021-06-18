@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -52,14 +53,19 @@
   <children>
     <AnchorPane fx:id="cadastroContainer" maxHeight="-1.0" maxWidth="-1.0">
       <children>
-            <Pane fx:id="paneCadastroConteinerMini" prefHeight="405.0" prefWidth="188.0" style="-fx-background-color: rgb(115,70,40);">
+            <Pane fx:id="paneCadastroConteinerMini" prefHeight="405.0" prefWidth="188.0" style="-fx-background-color: #845EC2;">
                <children>
+                  <Label layoutX="1.0" layoutY="78.0" prefHeight="44.0" prefWidth="188.0" text=" Catálogo de Livros" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
                   <Text fill="WHITE" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName:" wrappingWidth="129.0">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <Button fx:id="btnCatalogoLivro" blendMode="MULTIPLY" contentDisplay="TEXT_ONLY" layoutY="75.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="188.0" text="Catálogo de Livros" textAlignment="CENTER">
+                  <Button fx:id="btnCatalogoLivro" blendMode="MULTIPLY" contentDisplay="TEXT_ONLY" layoutY="75.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="188.0" textAlignment="CENTER" textFill="#ffffff00">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -74,12 +80,12 @@
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSobre" blendMode="MULTIPLY" layoutY="376.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="31.0" prefWidth="92.0" text="Sobre">
+                  <Button fx:id="btnSobre" blendMode="MULTIPLY" layoutY="376.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="31.0" prefWidth="86.0" text="Sobre">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnSair" blendMode="MULTIPLY" layoutX="91.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#handleClose" prefHeight="31.0" prefWidth="98.0" text="Sair">
+                  <Button fx:id="btnSair" blendMode="MULTIPLY" layoutX="86.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="31.0" prefWidth="103.0" text="Desconectar">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -91,6 +97,7 @@
                   </Button>
                </children>
             </Pane>
+            <AnchorPane fx:id="anchorTela" layoutX="188.0" prefHeight="405.0" prefWidth="453.0" />
       </children>
     </AnchorPane>
   </children>
