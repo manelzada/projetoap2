@@ -11,7 +11,7 @@ public class ArtigoCientif extends Produto {
     public ArtigoCientif() {
     }
 
-    public ArtigoCientif(String Universidade, String orientador, String autor, String titulo, int numPaginas, int anoDePublicacao) {
+    public ArtigoCientif(String Universidade, String orientador, String autor, String titulo, int numPaginas, String anoDePublicacao) {
         super(autor, titulo, numPaginas, anoDePublicacao);
         this.Universidade = Universidade;
         this.orientador = orientador;

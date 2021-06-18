@@ -9,15 +9,16 @@ import login.*;
 
 public class ControleUsuario {
     private ArrayList<Login> login = new ArrayList<>();
-    public void cadastrarUsuario(String email, String senha, String numero){
+
+    public void cadastrarUsuario(String email, String senha, String numero) {
         Login log = new Login(email, senha, numero);
         log.cadastrarLogin(log);
         login.add(new Login(email, senha, numero));
     }
 
-    public ArrayList<Login> listarUsuario() throws FileNotFoundException, IOException, ClassNotFoundException{
+    public ArrayList<Login> listarUsuario() throws FileNotFoundException, IOException, ClassNotFoundException {
         LoginDados logDados = new LoginDados();
-        ArrayList<Login>  listar = logDados.listarLogin();
+        ArrayList<Login> listar = logDados.listarLogin();
         return listar;
     }
 
@@ -30,9 +31,11 @@ public class ControleUsuario {
         }
         return null;
     }
-    public boolean loginUsuario(String email, String senha) throws FileNotFoundException, IOException, ClassNotFoundException{
+
+    public boolean loginUsuario(String email, String senha)
+            throws FileNotFoundException, IOException, ClassNotFoundException {
         Login login = pesquisarLogin(email);
-        if(login.getSenha().equals(senha)) {
+        if (login.getSenha().equals(senha)) {
             return true;
         } else {
             return false;
