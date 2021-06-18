@@ -3,26 +3,62 @@ package modelo;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Livro extends Produto implements Serializable{
+public class Livro implements Serializable{
     private double valorCompra;
-
-    public Livro() {
-    }
-
-    public Livro(double valorCompra, String autor, String titulo, int numPaginas, String anoDePublicacao) {
-        super(autor, titulo, numPaginas, anoDePublicacao);
-        this.valorCompra = valorCompra;
-    }
+    String autor; 
+    String titulo; 
+    int numPaginas;
+    String anoDePublicacao;
 
     public double getValorCompra() {
         return this.valorCompra;
     }
 
     public void setValorCompra(double valorCompra) {
-        if (valorCompra < 0)
-            this.valorCompra = 0;
-        else
-            this.valorCompra = valorCompra;
+        this.valorCompra = valorCompra;
+    }
+
+    public String getAutor() {
+        return this.autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getTitulo() {
+        return this.titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getNumPaginas() {
+        return this.numPaginas;
+    }
+
+    public void setNumPaginas(int numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    public String getAnoDePublicacao() {
+        return this.anoDePublicacao;
+    }
+
+    public void setAnoDePublicacao(String anoDePublicacao) {
+        this.anoDePublicacao = anoDePublicacao;
+    }
+
+    public Livro() {
+    }
+
+    public Livro(double valorCompra, String autor, String titulo, int numPaginas, String anoDePublicacao) {
+        this.autor = autor;
+        this.titulo = titulo;
+        this.numPaginas = numPaginas;
+        this.valorCompra = valorCompra;
+        this.anoDePublicacao = anoDePublicacao;
     }
 
     public ArrayList<Livro> listarLivro() throws NullPointerException {

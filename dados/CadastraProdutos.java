@@ -9,6 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import modelo.Livro;
 
@@ -53,5 +54,17 @@ public class CadastraProdutos implements Serializable {
         ObjectInputStream lerObj = new ObjectInputStream(fluxo);
         listLivro = (ArrayList<Livro>) lerObj.readObject();
         return listLivro;
+    }
+    public String imprimirList() throws FileNotFoundException, IOException, ClassNotFoundException{
+        String arraySave = "";
+        ArrayList<Livro> retorno = listarLivro();
+        for(int i = 0; i < retorno.size(); i++){
+             arraySave += retorno.get(i).getTitulo() + "\n" + 
+                         retorno.get(i).getAutor() + "\n" + 
+                         retorno.get(i).getNumPaginas() + "\n" + 
+                         retorno.get(i).getValorCompra() + "\n" + 
+                         retorno.get(i).getAnoDePublicacao();
+        }
+        return arraySave;
     }
 }

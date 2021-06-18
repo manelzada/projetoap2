@@ -1,39 +1,21 @@
 package controllers;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
-import javafx.collections.ObservableList;
+import dados.CadastraProdutos;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import modelo.Livro;
+import javafx.scene.control.ListView;
 
-public class CatalogoDeLivrosController implements Initializable {
-    @FXML
-    private TableView<Livro> tableViewLivro;
+public class CatalogoDeLivrosController {
 
     @FXML
-    private TableColumn<Livro, String> tableColumnLivroTitulo;
+    private ListView<String> listViewProdutos;
 
     @FXML
-    private TableColumn<Livro, String> tableColumnLivroAutor;
-
-    @FXML
-    private TableColumn<Livro, String> tableColumnLivroAno;
-
-    @FXML
-    private TableColumn<Livro, String> tableColumnLivroISBN;
-
-    private List<Livro> listLivros = new ArrayList<>();
-
-    private ObservableList<Livro> observableListLivros;
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    void initialize()throws FileNotFoundException, IOException, ClassNotFoundException{
+        CadastraProdutos cProdutos = new CadastraProdutos();
+        listViewProdutos.getItems().add(cProdutos.imprimirList());
     }
+
 }
