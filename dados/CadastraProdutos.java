@@ -59,11 +59,11 @@ public class CadastraProdutos implements Serializable {
         String arraySave = "";
         ArrayList<Livro> retorno = listarLivro();
         for(int i = 0; i < retorno.size(); i++){
-             arraySave += retorno.get(i).getTitulo() + "\n" + 
-                         retorno.get(i).getAutor() + "\n" + 
-                         retorno.get(i).getNumPaginas() + "\n" + 
-                         retorno.get(i).getValorCompra() + "\n" + 
-                         retorno.get(i).getAnoDePublicacao();
+             arraySave += "Titulo: " + retorno.get(i).getTitulo() + 
+                          "  Autor: " + retorno.get(i).getAutor() + "\n" + 
+                          "Paginas: " + retorno.get(i).getNumPaginas() + 
+                          "   Valor: " + retorno.get(i).getValorCompra() + "\n" + 
+                         "Ano de Publicação: " + retorno.get(i).getAnoDePublicacao() + "\n\n\n";
         }
         return arraySave;
     }
