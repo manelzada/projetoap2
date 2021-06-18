@@ -62,6 +62,9 @@ public class LoginController implements Initializable {
 
         boolean verificaLogin = cUser.loginUsuario(usuario, senha);
         if (verificaLogin == true) {
+            FXMLLoader cadastroLoader = new FXMLLoader(getClass().getResource("/menu/layout.fxml"));
+            Parent cadastro = cadastroLoader.load();
+            loginContainer.getChildren().setAll(cadastro);
             System.out.print("Deu bom");
         } else {
             Alert alerta = new Alert(AlertType.INFORMATION);

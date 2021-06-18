@@ -50,12 +50,11 @@ public class MenuController implements Initializable {
     private Label lblStatusMini;
 
     @FXML
-    private fontAwesomeIconView btnSair;
+    private Button btnSair;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-        
+             
     }
     
     @FXML
@@ -94,6 +93,12 @@ public class MenuController implements Initializable {
 
         }
         
+        else if(event.getSource()==btnSair){
+            lblStatusMini.setText("/home/sair");
+            lblStatus.setText("Sair");
+            cadastroContainer.setBackground(new Background(new BackgroundFill(Color.rgb(32 , 0 , 0  ), CornerRadii.EMPTY, Insets.EMPTY)));
+
+        }
         
     }
 
