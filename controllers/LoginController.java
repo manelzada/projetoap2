@@ -43,7 +43,7 @@ public class LoginController implements Initializable {
 
     @FXML
     void loginAdm(ActionEvent event) throws IOException {
-        FXMLLoader loginAdm = new FXMLLoader(getClass().getResource("/login/layout.fxml"));
+        FXMLLoader loginAdm = new FXMLLoader(getClass().getResource("/paineladm/layout.fxml"));
         Parent logAdm = loginAdm.load();
         loginContainer.getChildren().setAll(logAdm);
     }

@@ -35,49 +35,26 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CadastroController">
-  <children>
-    <AnchorPane fx:id="cadastroContainer" maxHeight="-1.0" maxWidth="-1.0">
-      <children>
-            <Pane prefHeight="400.0" prefWidth="282.0" style="-fx-background-color: #845EC2;">
-               <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/icon.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" layoutX="8.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA Bibliotecas" textAlignment="CENTER" wrappingWidth="266.0">
-                     <font>
-                        <Font name="System Bold" size="35.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <TextField fx:id="cadastroEmail" layoutX="332.0" layoutY="99.0" prefHeight="24.0" prefWidth="266.0" />
-            <TextField fx:id="cadastroSenha" layoutX="332.0" layoutY="145.0" prefHeight="24.0" prefWidth="266.0" />
-            <Button fx:id="botaoCadastro" layoutX="390.0" layoutY="229.0" mnemonicParsing="false" onAction="#cadastroFeito" text="CADASTRAR">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Label layoutX="332.0" layoutY="22.0" text="Cadastrar">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </Label>
-            <Label layoutX="332.0" layoutY="83.0" text="Email:" />
-            <Label layoutX="332.0" layoutY="129.0" text="Senha:" />
-            <TextField fx:id="cadastroNumero" layoutX="332.0" layoutY="196.0" prefHeight="24.0" prefWidth="266.0" />
-            <Label layoutX="332.0" layoutY="180.0" text="Numero:" />
-      </children>
-    </AnchorPane>
-  </children>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PainelAdmController">
+   <children>
+      <Label text="Painel ADM">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoAutor" layoutX="300.0" layoutY="83.0" promptText="Autor" />
+      <TextField fx:id="campoTitulo" layoutX="300.0" layoutY="124.0" promptText="Titulo" />
+      <TextField fx:id="campoNumPg" layoutX="300.0" layoutY="158.0" promptText="Numero de Pg" />
+      <TextField fx:id="campoPreco" layoutX="301.0" layoutY="188.0" promptText="Preço" />
+      <Button fx:id="botaoCadastrar" layoutX="335.0" layoutY="258.0" mnemonicParsing="false" onAction="#fazerCadastroLivro" text="Cadastrar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="campoAnoPubli" layoutX="301.0" layoutY="221.0" promptText="Ano de publicação" />
+   </children>
+</AnchorPane>
