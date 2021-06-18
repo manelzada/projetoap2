@@ -3,10 +3,10 @@ package modelo;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Livro implements Serializable{
+public class Livro implements Serializable {
     private double valorCompra;
-    String autor; 
-    String titulo; 
+    String autor;
+    String titulo;
     int numPaginas;
     String anoDePublicacao;
 

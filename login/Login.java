@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 import dados.LoginDados;
 
-public class Login implements Serializable{
+public class Login implements Serializable {
     String email;
     String senha;
     String numero;
     int nivel;
 
-    public Login() {}
+    public Login() {
+    }
 
     public Login(String email, String senha, String numero) {
         this.email = email;
@@ -49,7 +50,8 @@ public class Login implements Serializable{
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
-    public void cadastrarLogin(Login l){
+
+    public void cadastrarLogin(Login l) {
         LoginDados log = new LoginDados();
         log.cadastrarLogin(l);
     }

@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class ArtigoCientif extends Produto {
 
     private String Universidade;
-    private String orientador;   
-
+    private String orientador;
 
     public ArtigoCientif() {
     }
 
-    public ArtigoCientif(String Universidade, String orientador, String autor, String titulo, int numPaginas, String anoDePublicacao) {
+    public ArtigoCientif(String Universidade, String orientador, String autor, String titulo, int numPaginas,
+            String anoDePublicacao) {
         super(autor, titulo, numPaginas, anoDePublicacao);
         this.Universidade = Universidade;
         this.orientador = orientador;
@@ -35,8 +35,8 @@ public class ArtigoCientif extends Produto {
 
     public ArrayList<ArtigoCientif> listarArtigoCientif() throws NullPointerException {
         ArtigoCientif arti = new ArtigoCientif();
-        ArrayList <ArtigoCientif> artig = arti.listarArtigoCientif();
+        ArrayList<ArtigoCientif> artig = arti.listarArtigoCientif();
         return artig;
     }
-    
+
 }

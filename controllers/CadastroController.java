@@ -53,6 +53,6 @@ public class CadastroController {
     }
 
 }
-/* 
-cadastrarLogin(new Login(userEmail, userSenha, userNumero))
-*/
+/*
+ * cadastrarLogin(new Login(userEmail, userSenha, userNumero))
+ */

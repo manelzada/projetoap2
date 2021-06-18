@@ -5,6 +5,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CatalogoDeLivrosController">
    <children>
-      <ListView fx:id="listViewProdutos" prefHeight="245.0" prefWidth="453.0" />
+      <ListView fx:id="listViewProdutos" prefHeight="405.0" prefWidth="453.0" />
    </children>
 </AnchorPane>

@@ -40,7 +40,6 @@ public class LoginController implements Initializable {
     @FXML
     private Button botaoAdm;
 
-
     @FXML
     void loginAdm(ActionEvent event) throws IOException {
         FXMLLoader loginAdm = new FXMLLoader(getClass().getResource("/paineladm/layout.fxml"));
@@ -66,7 +65,6 @@ public class LoginController implements Initializable {
             FXMLLoader cadastroLoader = new FXMLLoader(getClass().getResource("/menu/layout.fxml"));
             Parent cadastro = cadastroLoader.load();
             loginContainer.getChildren().setAll(cadastro);
-            System.out.print("Deu bom");
         } else {
             Alert alerta = new Alert(AlertType.INFORMATION);
             alerta.setTitle("Login");

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import dados.CadastraProdutos;
 import modelo.*;
 
-public class ControleProduto implements Serializable{
+public class ControleProduto implements Serializable {
 
     private ArrayList<Livro> livros;
     private ArrayList<ArtigoCientif> Artigos;
@@ -16,21 +16,12 @@ public class ControleProduto implements Serializable{
             String anoDePublicacao) {
         Livro livro = new Livro(valorCompra, autor, titulo, numPaginas, anoDePublicacao);
         // System.out.print(livro.toString());
-       cadProduto.cadastrarProduto(livro);
+        cadProduto.cadastrarProduto(livro);
     }
 
     public ArrayList<Livro> listarLivro() throws NullPointerException {
         Livro livro = new Livro();
         return livro.listarLivro();
-    }
-
-    public Produto pesquisaLivroNome(String titulo) {
-        for (int i = 0; i < livros.size(); i++) {
-            if (livros.get(i).getTitulo() == titulo) {
-                return livros.get(i);
-            }
-        }
-        return null;
     }
 
     public void removeLivro(double valorCompra, String autor, String titulo, int numPaginas, String anoDePublicacao) {

@@ -13,7 +13,7 @@ public class CatalogoDeLivrosController {
     private ListView<String> listViewProdutos;
 
     @FXML
-    void initialize()throws FileNotFoundException, IOException, ClassNotFoundException{
+    void initialize() throws FileNotFoundException, IOException, ClassNotFoundException {
         CadastraProdutos cProdutos = new CadastraProdutos();
         listViewProdutos.getItems().add(cProdutos.imprimirList());
     }

@@ -55,15 +55,14 @@ public class CadastraProdutos implements Serializable {
         listLivro = (ArrayList<Livro>) lerObj.readObject();
         return listLivro;
     }
-    public String imprimirList() throws FileNotFoundException, IOException, ClassNotFoundException{
+
+    public String imprimirList() throws FileNotFoundException, IOException, ClassNotFoundException {
         String arraySave = "";
         ArrayList<Livro> retorno = listarLivro();
-        for(int i = 0; i < retorno.size(); i++){
-             arraySave += "Titulo: " + retorno.get(i).getTitulo() + 
-                          "  Autor: " + retorno.get(i).getAutor() + "\n" + 
-                          "Paginas: " + retorno.get(i).getNumPaginas() + 
-                          "   Valor: " + retorno.get(i).getValorCompra() + "\n" + 
-                         "Ano de Publicação: " + retorno.get(i).getAnoDePublicacao() + "\n\n\n";
+        for (int i = 0; i < retorno.size(); i++) {
+            arraySave += "Titulo: " + retorno.get(i).getTitulo() + "  Autor: " + retorno.get(i).getAutor() + "\n"
+                    + "Paginas: " + retorno.get(i).getNumPaginas() + "   Valor: " + retorno.get(i).getValorCompra()
+                    + "\n" + "Ano de Publicação: " + retorno.get(i).getAnoDePublicacao() + "\n\n\n";
         }
         return arraySave;
     }

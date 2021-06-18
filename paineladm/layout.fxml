@@ -36,11 +36,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PainelAdmController">
+<AnchorPane fx:id="painelContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PainelAdmController">
    <children>
+      <Pane layoutX="271.0" prefHeight="400.0" prefWidth="232.0" style="-fx-background-color: #845EC2;">
+         <children>
+            <Button fx:id="backButton" layoutX="64.0" layoutY="299.0" mnemonicParsing="false" onAction="#voltarTela" prefHeight="29.0" prefWidth="104.0" text="Voltar">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="botaoCadastrar" layoutX="64.0" layoutY="262.0" mnemonicParsing="false" onAction="#fazerCadastroLivro" text="Cadastrar">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
       <Label text="Painel ADM">
          <font>
             <Font name="System Bold" size="30.0" />
@@ -50,11 +64,6 @@
       <TextField fx:id="campoTitulo" layoutX="300.0" layoutY="124.0" promptText="Titulo" />
       <TextField fx:id="campoNumPg" layoutX="300.0" layoutY="158.0" promptText="Numero de Pg" />
       <TextField fx:id="campoPreco" layoutX="301.0" layoutY="188.0" promptText="Preço" />
-      <Button fx:id="botaoCadastrar" layoutX="335.0" layoutY="258.0" mnemonicParsing="false" onAction="#fazerCadastroLivro" text="Cadastrar">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
       <TextField fx:id="campoAnoPubli" layoutX="301.0" layoutY="221.0" promptText="Ano de publicação" />
    </children>
 </AnchorPane>
