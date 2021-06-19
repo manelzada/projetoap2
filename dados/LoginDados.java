@@ -54,5 +54,5 @@ public class LoginDados implements Serializable {
         ObjectInputStream lerObj = new ObjectInputStream(fluxo);
         listLogin = (ArrayList<Login>) lerObj.readObject();
         return listLogin;
-    }
+    }   
 }
